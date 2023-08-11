@@ -1,0 +1,129 @@
+.gallery h2 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0 120px 27px 120px;
+  position: relative;
+  color: $color-primary;
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0 45px 24px 45px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0 15px 15px 15px;
+  }
+
+  &::after {
+    content: "Фотогалерея";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: rgba(45, 56, 63, 0.03);
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 55px;
+
+    @include vp-1199 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      top: 0;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+}
+
+.gallery p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 120px 43px 120px;
+  width: 50%;
+
+  @include vp-1199 {
+    margin: 0 45px 37px 45px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px 64px 15px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+  }
+}
+
+.gallery__container {
+  position: relative;
+}
+
+.gallery__content {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 6px;
+
+  @include vp-767 {
+    gap: 3px;
+  }
+}
+
+.gallery__long-image-container{
+  grid-row: 1 / 3;
+  grid-column: 1;
+}
+
+.gallery__short-image-container{
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.gallery__middle-image-container{
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.gallery__buttons-container {
+  position: absolute;
+  top: 66px;
+  right: 120px;
+
+  @include vp-1199{
+    right: 45px;
+    top: 63px;
+  }
+
+  @include vp-767{
+    right: 15px;
+    top: auto;
+    bottom: 17.2em;
+  }
+}
+
+.gallery__back-button {
+  background-color: $color-secondary;
+  border: none;
+  padding: 11px 12px;
+}
+
+.gallery__next-button {
+  background-color: $color-secondary;
+  border: none;
+  transform: rotate(180deg);
+  padding: 11px 12px;
+}
+
+.gallery__button-icon {
+  display: flex;
+  align-self: center;
+}

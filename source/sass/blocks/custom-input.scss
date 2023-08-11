@@ -1,67 +1,44 @@
-.custom-input,
-.custom-textarea {
+.consultation__user-name,
+.consultation__user-phone-number {
   position: relative;
 
-  display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
-  }
-
-  label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
+    input {
+      background-color: $color-default-white;
+      border: 1px solid rgba(2, 102, 193, 0.10);
+      color: $color-primary;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      padding: 23px 30px;
+      width: 340px;
       transition: border 0.3s ease;
 
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
       &:hover {
-        border: 2px solid rgba(#000000, 0.5);
+        border: 1px solid $color-default-white;
       }
 
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
+      &:focus-visible,
+      &:active {
+        border: none;
+        outline: 1px solid $color-default-white;
+      }
+
+      &:disabled {
+        opacity: 0.4;
+      }
+
+      @include vp-1199 {
+        width: 100%;
+        padding: 16px 15px;
       }
     }
-  }
-
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
-  }
 
   &__error {
     position: absolute;
     right: 0;
     bottom: 35px;
 
-    color: #ff1553;
+    color: $color-error;
 
     opacity: 0;
 
@@ -75,37 +52,48 @@
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border: 1px solid $color-error;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 1px solid rgba($color-error, 0.5);
+        outline: none;
       }
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
+      border: 1px solid #22b259;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
+        border: 1px solid rgba(#22b259, 0.5);
+        outline: none;
       }
     }
   }
 
   .input-message {
     position: absolute;
-    right: 0;
-    bottom: -5px;
+    left: 0;
+    bottom: -40px;
 
     &.is-invalid {
-      color: #ff0000;
+      color: $color-error;
     }
 
     &.is-valid {
       color: #15ab07;
     }
+
+    @include vp-1199 {
+      display: none;
+    }
   }
+}
+
+.consultation__user-name input:focus-visible::placeholder,
+.consultation__user-name input:active::placeholder {
+  color: transparent;
 }

@@ -1,6 +1,11 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import './video';
+import './all-sliders';
+import './open-burger-menu';
+import './open-burger-menu';
+import './map';
 
 // ---------------------------------
 

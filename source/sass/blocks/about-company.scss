@@ -1,0 +1,146 @@
+.about-company__container {
+  display: flex;
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 49px;
+  background-image:
+    image-set(url("../../img/main/clouds.png") 1x,
+      url("../../img/main/clouds@2x.png") 2x,
+      url("../../img/main/clouds.webp") type("image/webp") 1x,
+      url("../../img/main/clouds@2x.webp") type("image/webp") 2x,
+    );
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right -4.4em;
+
+  @include vp-1199 {
+    background-image: none;
+    margin-bottom: 90px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 73px;
+    flex-direction: column;
+  }
+}
+
+.about-company__photo {
+  display: block;
+  object-fit: cover;
+  max-width: none;
+  margin-top: 6em;
+
+  @include vp-1199 {
+    margin-left: -13.2em;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    margin-left: -15.7em;
+    max-width: none;
+  }
+}
+
+.about-company__inner-container {
+  margin-left: -73px;
+  padding-top: 130px;
+  margin-right: 120px;
+
+  @include vp-1199 {
+    margin: 0 45px 0 -75px;
+    padding-top: 89px;
+  }
+
+  @include vp-767 {
+    max-width: none;
+    margin: 0 15px;
+    padding-top: 48px;
+  }
+}
+
+.about-company__inner-container h2 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0;
+  margin-bottom: 56px;
+  position: relative;
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 33px;
+  }
+
+  &::after {
+    content: "О нас";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: rgba(45, 56, 63, 0.03);
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 55px;
+
+    @include vp-1199 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      top: 0;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+}
+
+.about-company__history-container {
+  margin-bottom: 31px;
+
+  @include vp-1199 {
+    margin-bottom: 28px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 43px;
+  }
+}
+
+.about-company__history-container h3,
+.about-company__purpose h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.about-company__history-container p,
+.about-company__purpose p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+
+  @include vp-767 {
+    line-height: 20px;
+  }
+}

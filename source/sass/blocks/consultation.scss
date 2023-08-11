@@ -1,0 +1,148 @@
+.consultation h2 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  color: $color-default-white;
+  padding-top: 311px;
+  padding-right: 17px;
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
+
+  @include vp-1199 {
+    padding-top: 192px;
+    padding-right: 0;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 22px;
+    padding-top: 181px;
+    margin-bottom: 14px;
+  }
+}
+
+.consultation p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 42px;
+  padding-right: 17px;
+  text-align: center;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0 202px;
+    margin-bottom: 29px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    padding: 0;
+    margin-bottom: 26px;
+    line-height: 18px;
+  }
+}
+
+.consultation__container {
+  margin: 0 auto 82px auto;
+  background-image:
+  image-set(
+    url("../../img/feedback-form/feedback-form-background.png") 1x,
+    url("../../img/feedback-form/feedback-form-background@2x.png") 2x,
+    url("../../img/feedback-form/feedback-form-background.webp") 1x,
+    url("../../img/feedback-form/feedback-form-background@2x.webp") 2x,
+  );
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+
+  @include vp-1199 {
+    background-image:
+    image-set(
+      url("../../img/feedback-form/feedback-form-background-tablet.png") 1x,
+      url("../../img/feedback-form/feedback-form-background-tablet@2x.png") 2x,
+      url("../../img/feedback-form/feedback-form-background-tablet.webp") 1x,
+      url("../../img/feedback-form/feedback-form-background-tablet@2x.webp") 2x,
+    );
+    margin-bottom: 88px;
+  }
+
+  @include vp-767 {
+    background-image:
+    image-set(
+      url("../../img/feedback-form/feedback-form-background-mobile.png") 1x,
+      url("../../img/feedback-form/feedback-form-background-mobile@2x.png") 2x,
+      url("../../img/feedback-form/feedback-form-background-mobile.webp") 1x,
+      url("../../img/feedback-form/feedback-form-background-mobile@2x.webp") 2x,
+    );
+    padding: 0 15px;
+    margin-bottom: 67px;
+  }
+}
+
+.consultation__form {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 308px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding: 0 251px 183px 251px;
+    gap: 7px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 175px;
+    gap: 7px;
+  }
+}
+
+.consultation__user-name input::placeholder,
+.consultation__user-phone-number input::placeholder {
+  color: #2D383F;
+  font-family: $ff-montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  opacity: 0.5;
+
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.consultation__form button {
+  width: 238px;
+  border: none;
+  padding: 24px 0;
+  font-family: $ff-montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  background-color: $color-secondary;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    margin-top: 8px;
+    width: 100%;
+    padding: 21px 0;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    padding: 18px 0;
+  }
+}

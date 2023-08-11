@@ -1,0 +1,186 @@
+.feedback h2 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0;
+  position: relative;
+  color: $color-primary;
+  margin-bottom: 31px;
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 26px;
+    margin-bottom: 21px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
+
+  &::after {
+    content: "Отзывы";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: rgba(45, 56, 63, 0.03);
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 55px;
+
+    @include vp-1199 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      top: 0;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+}
+
+.feedback__container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-left: 120px;
+  position: relative;
+
+  @include vp-1199 {
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.feedback__content-container {
+  display: flex;
+  column-gap: 30px;
+  padding: 20px 40px 20px 20px;
+  box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.1);
+  max-width: 790px;
+
+  @include vp-1199 {
+    max-width: 560px;
+    padding-top: 28px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}
+
+.feedback__photo-user {
+  min-width: 258px;
+  height: 253px;
+  object-fit: cover;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    min-width: 186px;
+    height: 100%;
+  }
+
+  @include vp-767 {
+    min-width: auto;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.feedback__content {
+  padding-top: 12px;
+
+  @include vp-1199 {
+    padding-top: 0;
+  }
+}
+
+.feedback__content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 11px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 13px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
+.feedback__user-info p {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 13px;
+  margin: 25px 0 4px 0;
+
+  @include vp-1199 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+  }
+
+  @include vp-767 {
+    margin: 15px 0 4px 0;
+  }
+}
+
+.feedback__user-info span {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 100%;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.feedback__buttons-container {
+  position: absolute;
+  top: -9px;
+  right: 120px;
+
+  @include vp-1199{
+    right: 45px;
+    top: -15px;
+  }
+
+  @include vp-767{
+    right: 15px;
+    top: -10px;
+  }
+}
+
+.feedback__back-button {
+  background-color: $color-secondary;
+  border: none;
+  padding: 11px 12px;
+}
+
+.feedback__next-button {
+  background-color: $color-secondary;
+  border: none;
+  transform: rotate(180deg);
+  padding: 11px 12px;
+}
+
+.feedback__button-icon {
+  display: flex;
+  align-self: center;
+}
