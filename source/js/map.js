@@ -9,7 +9,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let desktopMarker = L.marker(L.latLng(55.816739, 37.63714), {
   icon: L.icon({
-    iconUrl: '../img/svg/location-marker-desktop.svg',
+    iconUrl: './img/svg/location-marker-desktop.svg',
     iconSize: [48, 48],
     iconAnchor: [20, 20],
   }),
