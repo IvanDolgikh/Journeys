@@ -10,7 +10,6 @@
   @include vp-1199 {
     font-size: 25px;
     line-height: 25px;
-    margin-bottom: 26px;
     margin-bottom: 21px;
   }
 
@@ -62,7 +61,7 @@
   display: flex;
   column-gap: 30px;
   padding: 20px 40px 20px 20px;
-  box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.1);
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   max-width: 790px;
 
   @include vp-1199 {
@@ -98,6 +97,8 @@
 
 .feedback__content {
   padding-top: 12px;
+  display: flex;
+  flex-direction: column;
 
   @include vp-1199 {
     padding-top: 0;
@@ -122,12 +123,27 @@
   }
 }
 
+.feedback__user-info {
+  margin-top: auto;
+  margin-bottom: 15px;
+
+  @include vp-1199 {
+    margin: 0;
+    margin-top: 12px;
+  }
+
+  @include vp-767 {
+    margin-top: 5px;
+  }
+}
+
 .feedback__user-info p {
   display: block;
   font-size: 13px;
   font-weight: 700;
   line-height: 13px;
-  margin: 25px 0 4px 0;
+  margin: 0;
+  margin-bottom: 5px;
 
   @include vp-1199 {
     font-size: 12px;
@@ -136,7 +152,7 @@
   }
 
   @include vp-767 {
-    margin: 15px 0 4px 0;
+    margin: 0 0 4px 0;
   }
 }
 
@@ -156,31 +172,13 @@
   top: -9px;
   right: 120px;
 
-  @include vp-1199{
+  @include vp-1199 {
     right: 45px;
     top: -15px;
   }
 
-  @include vp-767{
+  @include vp-767 {
     right: 15px;
     top: -10px;
   }
-}
-
-.feedback__back-button {
-  background-color: $color-secondary;
-  border: none;
-  padding: 11px 12px;
-}
-
-.feedback__next-button {
-  background-color: $color-secondary;
-  border: none;
-  transform: rotate(180deg);
-  padding: 11px 12px;
-}
-
-.feedback__button-icon {
-  display: flex;
-  align-self: center;
 }

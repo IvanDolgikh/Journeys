@@ -2,8 +2,6 @@
   font-size: 35px;
   font-weight: 800;
   line-height: 35px;
-  margin: 0;
-  margin-bottom: 54px;
   position: relative;
   color: $color-primary;
   margin: 0 120px 31px 120px;
@@ -11,7 +9,6 @@
   @include vp-1199 {
     font-size: 25px;
     line-height: 25px;
-    margin-bottom: 26px;
     margin: 0 45px 21px 45px;
   }
 
@@ -78,7 +75,7 @@
   }
 }
 
-.training h3{
+.training h3 {
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
@@ -99,7 +96,7 @@
 
 .training__instructor-container {
   padding: 20px;
-  box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.1);
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   height: 100%;
 
   @include vp-1199 {
@@ -123,7 +120,6 @@
     min-height: 212px;
   }
 
-  // Чтобы изображение тянулось на мобилке max-height убрать
   @include vp-1199 {
     width: 100%;
     height: auto;
@@ -155,6 +151,21 @@
   grid-row: 1;
   height: fit-content;
 
+  &:hover,
+  &:focus-visible {
+    border: 1px solid $color-primary;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-secondary;
+    border-color: transparent;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+
   @include vp-1199 {
     padding: 6px 4px;
   }
@@ -162,6 +173,10 @@
   @include vp-767 {
     margin-right: 12px;
   }
+}
+
+.training__instructor-info-container a:active .training__instructor-social-icon {
+  fill: $color-default-white;
 }
 
 .training__instructor-info-container p {
@@ -179,7 +194,8 @@
   }
 }
 
-.training__instructor-social {
+.training__instructor-social-icon {
+  fill: $color-primary;
   display: flex;
   align-self: center;
   justify-self: center;
@@ -190,27 +206,9 @@
   top: -9px;
   right: 0;
 
-  @include vp-767{
+  @include vp-767 {
     top: -10px;
   }
-}
-
-.training__back-button {
-  background-color: $color-secondary;
-  border: none;
-  padding: 11px 12px;
-}
-
-.training__next-button {
-  background-color: $color-secondary;
-  border: none;
-  transform: rotate(180deg);
-  padding: 11px 12px;
-}
-
-.training__button-icon {
-  display: flex;
-  align-self: center;
 }
 
 .training__process {
@@ -235,7 +233,7 @@
   }
 }
 
-.training__process h3{
+.training__process h3 {
   margin: 0 120px 41px 120px;
 
   @include vp-1199 {

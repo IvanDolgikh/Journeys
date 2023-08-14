@@ -1,0 +1,69 @@
+.swiper-buttons__back {
+  background-color: $color-secondary;
+  border: none;
+  padding: 11px 12px;
+  cursor: pointer;
+  outline: 1px solid transparent;
+
+  &:hover,
+  &:focus-visible {
+    outline: 1px solid $color-hover;
+    background-color: transparent;
+    transition: 0.3s;
+  }
+
+  &:active {
+    background-color: $color-hover;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    pointer-events: none;
+  }
+}
+
+.swiper-buttons__next {
+  background-color: $color-secondary;
+  border: none;
+  transform: rotate(180deg);
+  padding: 11px 12px;
+  cursor: pointer;
+  outline: 1px solid transparent;
+
+  &:hover,
+  &:focus-visible {
+    outline: 1px solid $color-hover;
+    background-color: transparent;
+    transition: 0.3s;
+  }
+
+  &:active {
+    background-color: $color-hover;
+    transition: 0.3s;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    pointer-events: none;
+  }
+}
+
+.swiper-buttons__back:hover .swiper-buttons__icon,
+.swiper-buttons__next:hover .swiper-buttons__icon,
+.swiper-buttons__back:focus-visible .swiper-buttons__icon,
+.swiper-buttons__next:focus-visible .swiper-buttons__icon {
+  fill: $color-hover;
+  transition: 0.3s;
+}
+
+.swiper-buttons__back:active .swiper-buttons__icon,
+.swiper-buttons__next:active .swiper-buttons__icon {
+  fill: $color-default-white;
+  transition: 0.3s;
+}
+
+.swiper-buttons__icon {
+  display: flex;
+  align-self: center;
+  fill: $color-default-white;
+}

@@ -4,6 +4,7 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 @import "vendor/swiper";
+@import "vendor/leaflet";
 
 // Global
 // ---------------------------------
@@ -34,13 +35,14 @@
 @import "blocks/gallery";
 @import "blocks/consultation";
 @import "blocks/contacts";
+@import "blocks/main-footer";
 
 // Swiper
 // ---------------------------------
 
 @import "swiper/swiper-slide";
-@import "swiper/swiper";
 @import "swiper/swiper-pagination";
+@import "swiper/swiper-buttons";
 
 // ---------------------------------
 

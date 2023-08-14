@@ -8,7 +8,7 @@ let logoFirst = document.querySelector('.main-header__logo-first');
 let logoSecond = document.querySelector('.main-header__logo-second');
 let body = document.querySelector('body');
 
-const openMenu = () => {
+const changeClasses = () => {
   list.classList.toggle('burger-menu');
   header.classList.toggle('main-header__info-container--active');
   contact.classList.toggle('main-header__contacts-container--active');
@@ -19,4 +19,25 @@ const openMenu = () => {
   body.classList.toggle('burger-menu--active');
 };
 
-button.addEventListener('click', openMenu);
+const onOpenMenu = () => {
+  changeClasses();
+};
+
+const onClickLink = (evt) => {
+  if (evt.target.closest('LI')) {
+    changeClasses();
+  }
+};
+
+const onClickOutside = (evt) => {
+  if (evt.target.className === 'burger-menu--active') {
+    changeClasses();
+  }
+};
+
+
+button.addEventListener('click', onOpenMenu);
+
+list.addEventListener('click', onClickLink);
+
+body.addEventListener('click', onClickOutside);

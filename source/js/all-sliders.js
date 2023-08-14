@@ -18,8 +18,8 @@ export const swiperTours = new Swiper('.swiper-2', {
   spaceBetween: 30,
 
   navigation: {
-    nextEl: '.tours__next-button',
-    prevEl: '.tours__back-button',
+    nextEl: '.tours .swiper-buttons__next',
+    prevEl: '.tours .swiper-buttons__back',
   },
 
   breakpoints: {
@@ -45,8 +45,8 @@ export const swiperInstructors = new Swiper('.swiper-3', {
   spaceBetween: 30,
 
   navigation: {
-    nextEl: '.training__next-button',
-    prevEl: '.training__back-button',
+    nextEl: '.training .swiper-buttons__next',
+    prevEl: '.training .swiper-buttons__back',
   },
 
   breakpoints: {
@@ -71,8 +71,8 @@ export const swiperFeedback = new Swiper('.swiper-4', {
   spaceBetween: 30,
 
   navigation: {
-    nextEl: '.feedback__next-button',
-    prevEl: '.feedback__back-button',
+    nextEl: '.feedback .swiper-buttons__next',
+    prevEl: '.feedback .swiper-buttons__back',
   },
 
   breakpoints: {
@@ -92,8 +92,8 @@ export const swiperGallery = new Swiper('.swiper-6', {
   spaceBetween: 5,
 
   navigation: {
-    nextEl: '.gallery__next-button',
-    prevEl: '.gallery__back-button',
+    nextEl: '.gallery__buttons-container .swiper-buttons__next',
+    prevEl: '.gallery__buttons-container .swiper-buttons__back',
   },
 });
 
@@ -110,8 +110,8 @@ const enableSwiperAdvantages = function () {
     initialSlide: 2,
 
     navigation: {
-      nextEl: '.advantages__next-button',
-      prevEl: '.advantages__back-button',
+      nextEl: '.advantages .swiper-buttons__next',
+      prevEl: '.advantages .swiper-buttons__back',
     },
   });
 };

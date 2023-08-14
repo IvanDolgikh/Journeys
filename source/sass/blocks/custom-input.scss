@@ -2,36 +2,36 @@
 .consultation__user-phone-number {
   position: relative;
 
-    input {
-      background-color: $color-default-white;
-      border: 1px solid rgba(2, 102, 193, 0.10);
-      color: $color-primary;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: normal;
-      padding: 23px 30px;
-      width: 340px;
-      transition: border 0.3s ease;
+  input {
+    background-color: $color-default-white;
+    border: 1px solid rgba(2, 102, 193, 0.1);
+    color: $color-primary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 23px 30px;
+    width: 340px;
+    transition: border 0.3s ease;
 
-      &:hover {
-        border: 1px solid $color-default-white;
-      }
-
-      &:focus-visible,
-      &:active {
-        border: none;
-        outline: 1px solid $color-default-white;
-      }
-
-      &:disabled {
-        opacity: 0.4;
-      }
-
-      @include vp-1199 {
-        width: 100%;
-        padding: 16px 15px;
-      }
+    &:hover {
+      border: 1px solid $color-secondary;
     }
+
+    &:focus-visible,
+    &:active {
+      outline: none;
+      border: 1px solid $color-hover;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+    }
+
+    @include vp-1199 {
+      width: 100%;
+      padding: 16px 15px;
+    }
+  }
 
   &__error {
     position: absolute;

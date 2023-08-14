@@ -69,17 +69,21 @@
   display: grid;
   column-gap: 132px;
   grid-template-columns: 1fr 1fr;
+  max-width: $max-width;
+  margin: 0 auto 104px auto;
 
   @include vp-1199 {
     padding: 0 45px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
   }
 
   @include vp-767 {
     padding: 0 17px 0 15px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
   }
 }
 
@@ -164,6 +168,20 @@
   width: fit-content;
   grid-column: 2;
   grid-row: 2;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    color: $color-hover;
+  }
+
+  &:active {
+    color: $color-secondary;
+  }
+
+  &:disabled {
+    color: rgba(2, 102, 193, 0.1);
+  }
 
   @include vp-1199 {
     font-size: 14px;

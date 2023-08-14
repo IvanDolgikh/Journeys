@@ -13,7 +13,7 @@
   }
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
@@ -21,7 +21,7 @@
   height: fit-content;
   right: 7.5em;
   left: auto;
-  top: 43em;
+  top: -7em;
 
   @include vp-1199 {
     right: 46%;
@@ -29,14 +29,14 @@
     bottom: 5.4em;
   }
 
-  @include vp-767{
+  @include vp-767 {
     right: 42.5%;
     top: auto;
     bottom: 2.3em;
   }
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
   margin-left: 15px;

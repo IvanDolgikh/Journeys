@@ -1,5 +1,5 @@
-let video = document.querySelector('.swiper-slide__video');
-let button = document.querySelector('.swiper-slide__button');
+let video = document.querySelector('.hero__video');
+let button = document.querySelector('.hero__button');
 
 function onPlayVideo() {
   if (video.paused) {
