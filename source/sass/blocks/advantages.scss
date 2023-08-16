@@ -1,3 +1,24 @@
+.advantages {
+  background-image:
+    image-set(url("../img/main/advantages-background-clouds.webp") type("image/webp") 1dppx,
+      url("../img/main/advantages-background-clouds@2x.webp") type("image/webp") 2dppx,
+      url("../img/main/advantages-background-clouds.png") 1dppx,
+      url("../img/main/advantages-background-clouds@2x.png") 2dppx,
+    ),
+    image-set(url("../img/main/advantages-background-clouds-2.webp") type("image/webp") 1dppx,
+      url("../img/main/advantages-background-clouds-2@2x.webp") type("image/webp") 2dppx,
+      url("../img/main/advantages-background-clouds-2.png") 1dppx,
+      url("../img/main/advantages-background-clouds-2@2x.png") 2dppx,
+    );
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top 4.7em right -11.6em, top -7em left -29em;
+
+  @include vp-1199 {
+    background-image: none;
+  }
+}
+
 .advantages .swiper-slide {
   border: 1px solid rgba(2, 102, 193, 0.1);
 }
@@ -24,24 +45,8 @@
   margin: 0 auto 128px auto;
   padding-top: 135px;
 
-  background-image:
-    image-set(url("../img/main/advantages-background-clouds.png") 1dppx,
-      url("../img/main/advantages-background-clouds@2x.png") 2dppx,
-      url("../img/main/advantages-background-clouds.webp") type("image/webp") 1dppx,
-      url("../img/main/advantages-background-clouds@2x.webp") type("image/webp") 2dppx,
-    ),
-    image-set(url("../img/main/advantages-background-clouds-2.png") 1dppx,
-      url("../img/main/advantages-background-clouds-2@2x.png") 2dppx,
-      url("../img/main/advantages-background-clouds-2.webp") type("image/webp") 1dppx,
-      url("../img/main/advantages-background-clouds-2@2x.webp") type("image/webp") 2dppx,
-    );
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: top 4.7em right -11.6em, top -7em left -29em;
-
   @include vp-1199 {
     padding: 89px 45px 0 45px;
-    background-image: none;
     margin-bottom: 87px;
   }
 
@@ -71,29 +76,28 @@
     line-height: 22px;
     margin-bottom: 28px;
   }
+}
 
+[data-advantages-secondary-title]::after {
+  content: attr(data-advantages-secondary-title);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  color: rgba(45, 56, 63, 0.03);
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 55px;
 
-  &::after {
-    content: "Преимущества";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    color: rgba(45, 56, 63, 0.03);
-    font-size: 55px;
-    font-weight: 800;
-    line-height: 55px;
+  @include vp-1199 {
+    font-size: 40px;
+    line-height: 40px;
+  }
 
-    @include vp-1199 {
-      font-size: 40px;
-      line-height: 40px;
-    }
-
-    @include vp-767 {
-      top: 0;
-      font-size: 26px;
-      line-height: 26px;
-    }
+  @include vp-767 {
+    top: 0;
+    font-size: 26px;
+    line-height: 26px;
   }
 }
 

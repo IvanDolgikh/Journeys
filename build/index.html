@@ -17,6 +17,7 @@
 </head>
 
 <body>
+  <div class="wrapper">
 
   <header class="main-header">
     <div class="main-header__container">
@@ -212,7 +213,7 @@
 
       <section class="tours" id="tours">
         <div class="tours__container">
-          <h2>Ближайшие туры</h2>
+          <h2 data-tours-secondary-title="Ближайшие туры">Ближайшие туры</h2>
 
           <div class="swiper-buttons tours__buttons-container">
             <button class="swiper-buttons__back" aria-label="Предыдущий слайд.">
@@ -558,12 +559,10 @@
       </section>
 
       <section class="training" id="training">
-
-        <h2>Обучение</h2>
+        <div class="training__container">
+        <h2 data-training-secondary-title="Обучение">Обучение</h2>
         <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами которых десятки пройденных маршрутов
           Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и&nbsp;других.</p>
-
-        <div class="training__container">
 
           <div class="training__instructors">
             <h3>Наши инструкторы</h3>
@@ -709,42 +708,41 @@
 
             </div>
           </div>
+        </div>
+        <div class="training__process">
+          <h3>Процесс обучения</h3>
 
-          <div class="training__process">
-            <h3>Процесс обучения</h3>
+          <div class="training__process-container">
+            <ul class="training__process-list reset-list">
 
-            <div class="training__process-container">
-              <ul class="training__process-list reset-list">
+              <li class="training__process-item">
+                <svg class="training__process-item-icon" width="25" height="25">
+                  <use href="./img/sprite.svg#training-process-map-icon"></use>
+                </svg>
+                <span>Изучение спортивного туристского движения</span>
+              </li>
 
-                <li class="training__process-item">
-                  <svg class="training__process-item-icon" width="25" height="25">
-                    <use href="./img/sprite.svg#training-process-map-icon"></use>
-                  </svg>
-                  <span>Изучение спортивного туристского движения</span>
-                </li>
+              <li class="training__process-item">
+                <svg class="training__process-item-icon" width="24" height="24">
+                  <use href="./img/sprite.svg#training-process-boots-icon"></use>
+                </svg>
+                <span>Подготовка и&nbsp;техническое снаряжение в&nbsp;походах</span>
+              </li>
 
-                <li class="training__process-item">
-                  <svg class="training__process-item-icon" width="24" height="24">
-                    <use href="./img/sprite.svg#training-process-boots-icon"></use>
-                  </svg>
-                  <span>Подготовка и&nbsp;техническое снаряжение в&nbsp;походах</span>
-                </li>
+              <li class="training__process-item">
+                <svg class="training__process-item-icon" width="23" height="23">
+                  <use href="./img/sprite.svg#training-process-tree-icon"></use>
+                </svg>
+                <span>Лекции по&nbsp;окружающей среде, экологии и&nbsp;гигиене</span>
+              </li>
 
-                <li class="training__process-item">
-                  <svg class="training__process-item-icon" width="23" height="23">
-                    <use href="./img/sprite.svg#training-process-tree-icon"></use>
-                  </svg>
-                  <span>Лекции по&nbsp;окружающей среде, экологии и&nbsp;гигиене</span>
-                </li>
-
-                <li class="training__process-item">
-                  <svg class="training__process-item-icon" width="25" height="25">
-                    <use href="./img/sprite.svg#training-process-mountain-icon"></use>
-                  </svg>
-                  <span>Разъяснение сложности горных препятствий </span>
-                </li>
-              </ul>
-            </div>
+              <li class="training__process-item">
+                <svg class="training__process-item-icon" width="25" height="25">
+                  <use href="./img/sprite.svg#training-process-mountain-icon"></use>
+                </svg>
+                <span>Разъяснение сложности горных препятствий </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -771,7 +769,7 @@
         </picture>
 
         <div class="about-company__inner-container">
-          <h2>О нас</h2>
+          <h2 data-about-company-secondary-title="О нас">О нас</h2>
           <div class="about-company__history-container">
             <h3>История компании</h3>
             <p>В далеком 2000 году мы начали заниматься туризмом – походы, поездки, восхождения, нам это настолько
@@ -791,7 +789,7 @@
 
     <section class="feedback" id="feedback">
       <div class="feedback__container">
-        <h2>Отзывы</h2>
+        <h2 data-feedback-secondary-title="Отзывы">Отзывы</h2>
 
         <div class="swiper-buttons feedback__buttons-container">
           <button class="swiper-buttons__back" aria-label="Предыдущий слайд.">
@@ -963,7 +961,7 @@
 
     <section class="advantages">
       <div class="advantages__container">
-        <h2>Преимущества</h2>
+        <h2 data-advantages-secondary-title="Преимущества">Преимущества</h2>
 
         <div class="swiper swiper-5">
           <div class="swiper-wrapper">
@@ -1059,7 +1057,7 @@
 
     <section class="gallery" id="gallery">
       <div class="gallery__container">
-        <h2>Фотогалерея</h2>
+        <h2 data-gallery-secondary-title="Фотогалерея">Фотогалерея</h2>
         <p>Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур, а&nbsp;также отмечайте нас на&nbsp;фото. Лучшие
           фотографии украсят этот раздел нашего сайта.</p>
         <div class="swiper-buttons gallery__buttons-container">
@@ -1249,7 +1247,7 @@
 
           </div>
 
-          <div class="swiper-buttons advantages__buttons-container">
+          <div class="swiper-buttons gallery__buttons-container">
             <button class="swiper-buttons__back" aria-label="Предыдущий слайд.">
               <svg class="swiper-buttons__icon" width="13" height="13">
                 <use href="./img/sprite.svg#arrow-back-icon"></use>
@@ -1287,7 +1285,7 @@
             data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно"
             data-required="data-required">
             <label for="user-phone-number"></label>
-            <input type="text" name="user-phone-number" id="user-phone-number" placeholder="Телефон"
+            <input type="tel" name="user-phone-number" id="user-phone-number" placeholder="Телефон"
               aria-label="Ввести номер телефона.">
           </div>
 
@@ -1299,7 +1297,7 @@
 
     <section class="contacts" id="contacts">
       <div class="contacts__container">
-        <h2>Контакты</h2>
+        <h2 data-contacts-secondary-title="Контакты">Контакты</h2>
         <p>Свяжитесь с&nbsp;нами любым удобным для вас способом или приходите к&nbsp;нам в&nbsp;гости. Мы&nbsp;будем рады поделиться увлекательными историями и&nbsp;подобрать для вас тур.</p>
         <div class="contacts__info-container">
 
@@ -1400,7 +1398,7 @@
 
     </div>
   </footer>
-
+</div>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

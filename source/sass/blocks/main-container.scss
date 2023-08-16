@@ -1,34 +1,33 @@
 .main-container__image-wrapper {
-  max-width: $max-width;
   margin: 0 auto;
   position: relative;
 
   background-image:
-    image-set(url("../img/main/clouds-in-mountains.png") 1dppx,
-      url("../img/main/clouds-in-mountains@2x.png") 2dppx,
-      url("../../img/main/clouds-in-mountains.webp") type("image/webp") 1dppx,
+    image-set(url("../../img/main/clouds-in-mountains.webp") type("image/webp") 1dppx,
       url("../../img/main/clouds-in-mountains@2x.webp") type("image/webp") 2dppx,
+      url("../img/main/clouds-in-mountains.png") 1dppx,
+      url("../img/main/clouds-in-mountains@2x.png") 2dppx,
     ),
-    image-set(url("../img/main/clouds.png") 1dppx,
-      url("../img/main/clouds@2x.png") 2dppx,
-      url("../img/main/clouds.webp") type("image/webp") 1dppx,
+    image-set(url("../img/main/clouds.webp") type("image/webp") 1dppx,
       url("../img/main/clouds@2x.webp") type("image/webp") 2dppx,
+      url("../img/main/clouds.png") 1dppx,
+      url("../img/main/clouds@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: right top -8.8em, top 24em left -26.5em;
+  background-position: right top -1em, top 24em left -26.5em;
 
   @include vp-1199 {
-    background-position: right -19.3em top -11.4em, 0;
+    background-position: right -19.3em top -6em, 0;
   }
 
   @include vp-767 {
     background-image:
-      image-set(url("../img/main/clouds-in-mountains-mobile.png") 1dppx,
-        url("../img/main/clouds-in-mountains-mobile@2x.png") 2dppx,
-        url("../img/main/clouds-in-mountains-mobile.webp") type("image/webp") 1dppx,
+      image-set(url("../img/main/clouds-in-mountains-mobile.webp") type("image/webp") 1dppx,
         url("../img/main/clouds-in-mountains-mobile@2x.webp") type("image/webp") 2dppx,
+        url("../img/main/clouds-in-mountains-mobile.png") 1dppx,
+        url("../img/main/clouds-in-mountains-mobile@2x.png") 2dppx,
       );
-    background-position: right top 4.4em;
+    background-position: right top 8.4em;
   }
 }

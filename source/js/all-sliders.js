@@ -1,5 +1,3 @@
-import Swiper from '../js/vendor/swiper';
-
 export const swiper = new Swiper('.swiper-1', {
   direction: 'horizontal',
   loop: false,

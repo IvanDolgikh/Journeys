@@ -9,15 +9,17 @@
 }
 
 .tours__container {
-  margin: 123px 120px 126px 120px;
+  padding: 123px 120px 126px 120px;
+  margin: 0 auto;
   position: relative;
+  max-width: $max-width;
 
   @include vp-1199 {
-    margin: 88px 45px 85px 45px;
+    padding: 88px 45px 85px 45px;
   }
 
   @include vp-767 {
-    margin: 67px 15px 66px 15px;
+    padding: 67px 15px 66px 15px;
   }
 }
 
@@ -42,28 +44,27 @@
     padding-right: 74px;
     margin-bottom: 27px;
   }
+}
 
+[data-tours-secondary-title]::after {
+  content: attr(data-tours-secondary-title);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: rgba(45, 56, 63, 0.03);
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 55px;
 
-  &::after {
-    content: "Ближайшие туры";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    color: rgba(45, 56, 63, 0.03);
-    font-size: 55px;
-    font-weight: 800;
-    line-height: 55px;
+  @include vp-1199 {
+    font-size: 40px;
+    line-height: 40px;
+  }
 
-    @include vp-1199 {
-      font-size: 40px;
-      line-height: 40px;
-    }
-
-    @include vp-767 {
-      top: 0;
-      font-size: 26px;
-      line-height: 26px;
-    }
+  @include vp-767 {
+    top: 0;
+    font-size: 26px;
+    line-height: 26px;
   }
 }
 
@@ -127,7 +128,7 @@
   padding: 206px 24px 22px 20px;
 
   @include vp-767 {
-    padding: 196px 20px 19px 20px;
+    padding: 196px 20px 25px 20px;
   }
 }
 
@@ -324,10 +325,10 @@
 .tours__first-slide {
   background-image:
     linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-    image-set(url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx,
-      url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx,
-      url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx,
+    image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx,
       url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") type("image/webp") 2dppx,
+      url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx,
+      url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
   background-size: cover;
@@ -335,20 +336,20 @@
   @include vp-1199 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx,
-        url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx,
-        url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx,
+      image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx,
         url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") type("image/webp") 2dppx,
+        url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx,
+        url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx,
       );
   }
 
   @include vp-767 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx,
-        url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx,
-        url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx,
+      image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx,
         url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") type("image/webp") 2dppx,
+        url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx,
+        url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx,
       );
   }
 }
@@ -356,10 +357,10 @@
 .tours__second-slide {
   background-image:
     linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-    image-set(url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx,
-      url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx,
-      url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx,
+    image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx,
       url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") type("image/webp") 2dppx,
+      url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx,
+      url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
   background-size: cover;
@@ -367,20 +368,20 @@
   @include vp-1199 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx,
-        url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx,
-        url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx,
+      image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx,
         url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") type("image/webp") 2dppx,
-      );
+        url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx,
+        url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx,
+    );
   }
 
   @include vp-767 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx,
-        url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx,
-        url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx,
+      image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx,
         url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") type("image/webp") 2dppx,
+        url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx,
+        url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx,
       );
   }
 }
@@ -388,10 +389,10 @@
 .tours__third-slide {
   background-image:
     linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-    image-set(url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx,
-      url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx,
-      url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx,
+    image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx,
       url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") type("image/webp") 2dppx,
+      url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx,
+      url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
   background-size: cover;
@@ -399,34 +400,36 @@
   @include vp-1199 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx,
-        url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx,
-        url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx,
+      image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx,
         url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") type("image/webp") 2dppx,
+        url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx,
+        url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx,
       );
   }
 
   @include vp-767 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx,
-        url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx,
-        url("../img/tours/tour-mobile/third-tour-mobile.webp") 1dppx,
-        url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") 2dppx,
-      );
+      image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") type("image/webp") 1dppx,
+      url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") type("image/webp") 2dppx,
+      url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx,
+      url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx,
+    );
   }
 }
 
 .tours__buttons-container {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 123px;
+  right: 120px;
 
   @include vp-1199 {
-    top: -5px;
+    right: 45px;
+    top: 83px;
   }
 
   @include vp-767 {
-    top: 2px;
+    right: 15px;
+    top: 67px;
   }
 }

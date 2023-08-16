@@ -30,6 +30,7 @@
     font-size: 56px;
     line-height: 56px;
     margin-bottom: 12px;
+    max-width: none;
   }
 
   @include vp-767 {
@@ -255,31 +256,32 @@
 .hero__first-slide {
   background-image:
     linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-    image-set(url("../img/hero/hero-first/hero-first-desktop.png") 1dppx,
-      url("../img/hero/hero-first/hero-first-desktop@2x.png") 2dppx,
-      url("../img/hero/hero-first/hero-first-desktop.webp") type("image/webp") 1dppx,
+    image-set(url("../img/hero/hero-first/hero-first-desktop.webp") type("image/webp") 1dppx,
       url("../img/hero/hero-first/hero-first-desktop@2x.webp") type("image/webp") 2dppx,
+      url("../img/hero/hero-first/hero-first-desktop.png") 1dppx,
+      url("../img/hero/hero-first/hero-first-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-color: #668bb2;
 
   @include vp-1199 {
     background-image:
       linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-      image-set(url("../img/hero/hero-first/hero-first-tablet.png") 1dppx,
-        url("../img/hero/hero-first/hero-first-tablet@2x.png") 2dppx,
-        url("../img/hero/hero-first/hero-first-tablet.webp") type("image/webp") 1dppx,
+      image-set(url("../img/hero/hero-first/hero-first-tablet.webp") type("image/webp") 1dppx,
         url("../img/hero/hero-first/hero-first-tablet@2x.webp") type("image/webp") 2dppx,
+        url("../img/hero/hero-first/hero-first-tablet.png") 1dppx,
+        url("../img/hero/hero-first/hero-first-tablet@2x.png") 2dppx,
       );
   }
 
   @include vp-767 {
     background-image:
       linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-      image-set(url("../img/hero/hero-first/hero-first-mobile.png") 1dppx,
-        url("../img/hero/hero-first/hero-first-mobile@2x.png") 2dppx,
-        url("../img/hero/hero-first/hero-first-mobile.webp") type("image/webp") 1dppx,
+      image-set(url("../img/hero/hero-first/hero-first-mobile.webp") type("image/webp") 1dppx,
         url("../img/hero/hero-first/hero-first-mobile@2x.webp") type("image/webp") 2dppx,
+        url("../img/hero/hero-first/hero-first-mobile.png") 1dppx,
+        url("../img/hero/hero-first/hero-first-mobile@2x.png") 2dppx,
       );
   }
 }
@@ -287,31 +289,32 @@
 .hero__second-slide {
   background-image:
     linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-    image-set(url("../img/hero/hero-second/hero-second-desktop.png") 1dppx,
-      url("../img/hero/hero-second/hero-second-desktop@2x.png") 2dppx,
-      url("../img/hero/hero-second/hero-second-desktop.webp") type("image/webp") 1dppx,
+    image-set(url("../img/hero/hero-second/hero-second-desktop.webp") type("image/webp") 1dppx,
       url("../img/hero/hero-second/hero-second-desktop@2x.webp") type("image/webp") 2dppx,
+      url("../img/hero/hero-second/hero-second-desktop.png") 1dppx,
+      url("../img/hero/hero-second/hero-second-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-color: #4d7da4;
 
   @include vp-1199 {
     background-image:
       linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-      image-set(url("../img/hero/hero-second/hero-second-tablet.png") 1dppx,
-        url("../img/hero/hero-second/hero-second-tablet@2x.png") 2dppx,
-        url("../img/hero/hero-second/hero-second-tablet.webp") type("image/webp") 1dppx,
+      image-set(url("../img/hero/hero-second/hero-second-tablet.webp") type("image/webp") 1dppx,
         url("../img/hero/hero-second/hero-second-tablet@2x.webp") type("image/webp") 2dppx,
+        url("../img/hero/hero-second/hero-second-tablet.png") 1dppx,
+        url("../img/hero/hero-second/hero-second-tablet@2x.png") 2dppx,
       );
   }
 
   @include vp-767 {
     background-image:
       linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-      image-set(url("../img/hero/hero-second/hero-second-mobile.png") 1dppx,
-        url("../img/hero/hero-second/hero-second-mobile@2x.png") 2dppx,
-        url("../img/hero/hero-second/hero-second-mobile.webp") type("image/webp") 1dppx,
+      image-set(url("../img/hero/hero-second/hero-second-mobile.webp") type("image/webp") 1dppx,
         url("../img/hero/hero-second/hero-second-mobile@2x.webp") type("image/webp") 2dppx,
+        url("../img/hero/hero-second/hero-second-mobile.png") 1dppx,
+        url("../img/hero/hero-second/hero-second-mobile@2x.png") 2dppx,
       );
   }
 }
@@ -319,31 +322,32 @@
 .hero__third-slide {
   background-image:
     linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-    image-set(url("../img/hero/hero-third/hero-third-desktop.png") 1dppx,
-      url("../img/hero/hero-third/hero-third-desktop@2x.png") 2dppx,
-      url("../img/hero/hero-third/hero-third-desktop.webp") type("image/webp") 1dppx,
+    image-set(url("../img/hero/hero-third/hero-third-desktop.webp") type("image/webp") 1dppx,
       url("../img/hero/hero-third/hero-third-desktop@2x.webp") type("image/webp") 2dppx,
+      url("../img/hero/hero-third/hero-third-desktop.png") 1dppx,
+      url("../img/hero/hero-third/hero-third-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-color: #9eb0bc;
 
   @include vp-1199 {
     background-image:
       linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-      image-set(url("../img/hero/hero-third/hero-third-tablet.png") 1dppx,
-        url("../img/hero/hero-third/hero-third-tablet@2x.png") 2dppx,
-        url("../img/hero/hero-third/hero-third-tablet.webp") type("image/webp") 1dppx,
+      image-set(url("../img/hero/hero-third/hero-third-tablet.webp") type("image/webp") 1dppx,
         url("../img/hero/hero-third/hero-third-tablet@2x.webp") type("image/webp") 2dppx,
+        url("../img/hero/hero-third/hero-third-tablet.png") 1dppx,
+        url("../img/hero/hero-third/hero-third-tablet@2x.png") 2dppx,
       );
   }
 
   @include vp-767 {
     background-image:
       linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%),
-      image-set(url("../img/hero/hero-third/hero-third-mobile.png") 1dppx,
-        url("../img/hero/hero-third/hero-third-mobile@2x.png") 2dppx,
-        url("../img/hero/hero-third/hero-third-mobile.webp") type("image/webp") 1dppx,
+      image-set(url("../img/hero/hero-third/hero-third-mobile.webp") type("image/webp") 1dppx,
         url("../img/hero/hero-third/hero-third-mobile@2x.webp") type("image/webp") 2dppx,
+        url("../img/hero/hero-third/hero-third-mobile.png") 1dppx,
+        url("../img/hero/hero-third/hero-third-mobile@2x.png") 2dppx,
       );
   }
 }
