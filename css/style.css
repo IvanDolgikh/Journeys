@@ -3249,8 +3249,8 @@ footer {
 .main-container__image-wrapper {
   margin: 0 auto;
   position: relative;
-  background-image: -webkit-image-set(url("../../img/main/clouds-in-mountains.webp") type("image/webp") 1dppx, url("../../img/main/clouds-in-mountains@2x.webp") type("image/webp") 2dppx, url("../img/main/clouds-in-mountains.png") 1dppx, url("../img/main/clouds-in-mountains@2x.png") 2dppx), -webkit-image-set(url("../img/main/clouds.webp") type("image/webp") 1dppx, url("../img/main/clouds@2x.webp") type("image/webp") 2dppx, url("../img/main/clouds.png") 1dppx, url("../img/main/clouds@2x.png") 2dppx);
-  background-image: image-set(url("../../img/main/clouds-in-mountains.webp") type("image/webp") 1dppx, url("../../img/main/clouds-in-mountains@2x.webp") type("image/webp") 2dppx, url("../img/main/clouds-in-mountains.png") 1dppx, url("../img/main/clouds-in-mountains@2x.png") 2dppx), image-set(url("../img/main/clouds.webp") type("image/webp") 1dppx, url("../img/main/clouds@2x.webp") type("image/webp") 2dppx, url("../img/main/clouds.png") 1dppx, url("../img/main/clouds@2x.png") 2dppx);
+  background-image: -webkit-image-set(url("../img/main/clouds-in-mountains.webp") type("image/webp") 1dppx, url("../img/main/clouds-in-mountains@2x.webp") type("image/webp") 2dppx, url("../img/main/clouds-in-mountains.png") 1dppx, url("../img/main/clouds-in-mountains@2x.png") 2dppx), -webkit-image-set(url("../img/main/clouds.webp") type("image/webp") 1dppx, url("../img/main/clouds@2x.webp") type("image/webp") 2dppx, url("../img/main/clouds.png") 1dppx, url("../img/main/clouds@2x.png") 2dppx);
+  background-image: image-set(url("../img/main/clouds-in-mountains.webp") type("image/webp") 1dppx, url("../img/main/clouds-in-mountains@2x.webp") type("image/webp") 2dppx, url("../img/main/clouds-in-mountains.png") 1dppx, url("../img/main/clouds-in-mountains@2x.png") 2dppx), image-set(url("../img/main/clouds.webp") type("image/webp") 1dppx, url("../img/main/clouds@2x.webp") type("image/webp") 2dppx, url("../img/main/clouds.png") 1dppx, url("../img/main/clouds@2x.png") 2dppx);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right top -1em, top 24em left -26.5em;
@@ -5023,6 +5023,7 @@ footer {
 
   .training__process h3 {
     padding: 0 45px 41px 45px;
+    margin-bottom: 0;
   }
 
   .training__process-list {
@@ -5607,7 +5608,7 @@ footer {
   }
 
   .tours__content-container {
-    padding: 196px 20px 25px 20px;
+    padding: 196px 20px 19px 20px;
   }
 
   .tours__content-container p {
