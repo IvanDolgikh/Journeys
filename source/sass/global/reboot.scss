@@ -31,21 +31,11 @@ body {
   flex-direction: column;
   background-color: $color-default-white;
   min-height: 100vh;
-  /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
-
-  .header,
-  .footer {
-    flex-shrink: 0;
-  }
-
-  main {
-    flex-grow: 1;
-  }
 }
 
 main {
   flex: auto;
+  flex-grow: 1;
 }
 
 a {
