@@ -2104,26 +2104,14 @@ body {
   flex-direction: column;
   background-color: #ffffff;
   min-height: 100vh;
-  /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
-}
-
-body .header,
-body .footer {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-body main {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 main {
   -webkit-box-flex: 1;
   -ms-flex: auto;
   flex: auto;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 a {
