@@ -2927,6 +2927,10 @@ button,
   position: relative;
 }
 
+.main-header__nav-container {
+  margin-right: auto;
+}
+
 .main-header__info-container {
   position: absolute;
   top: 40px;
@@ -2939,14 +2943,19 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 10px;
   z-index: 20;
   max-width: 1440px;
+}
+
+.main-header__logo-container {
+  margin-right: auto;
 }
 
 .main-header__nav-list {
@@ -2957,7 +2966,6 @@ button,
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  padding: 0 20px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -2987,11 +2995,23 @@ button,
   color: rgba(255, 255, 255, 0.5);
 }
 
+.main-header__contacts-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
 .main-header__contacts-container a {
   font-size: 18px;
   font-weight: 600;
   line-height: 18px;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .main-header__contacts-container a:hover,
@@ -3049,24 +3069,31 @@ button,
   margin-bottom: 35px;
 }
 
-.hero__content-container a {
+.hero__button-container {
+  width: 220px;
+  margin: 0;
+  margin-bottom: 150px;
+}
+
+.hero__button-container a {
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
   color: #ffffff;
   background-color: #0266c1;
   display: block;
-  width: 220px;
   padding: 21px 0;
-  margin: 0;
-  margin-bottom: 150px;
   text-align: center;
   outline: 1px solid transparent;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.hero__content-container a:hover,
-.hero__content-container a:focus-visible {
+.hero__button-container a:hover,
+.hero__button-container a:focus-visible {
   outline: 1px solid #1c3374;
   color: #1c3374;
   background-color: transparent;
@@ -3074,14 +3101,14 @@ button,
   transition: 0.3s;
 }
 
-.hero__content-container a:active {
+.hero__button-container a:active {
   background-color: #1c3374;
   color: #ffffff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.hero__content-container a:disabled {
+.hero__button-container a:disabled {
   opacity: 0.1;
 }
 
@@ -3188,24 +3215,24 @@ button,
 }
 
 .hero__first-slide {
-  background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-first/hero-first-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-desktop.png") 1dppx, url("../img/hero/hero-first/hero-first-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-first/hero-first-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-desktop.png") 1dppx, url("../img/hero/hero-first/hero-first-desktop@2x.png") 2dppx);
+  background-image: -webkit-image-set(url("../img/hero/hero-first/hero-first-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-desktop.png") 1dppx, url("../img/hero/hero-first/hero-first-desktop@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+  background-image: image-set(url("../img/hero/hero-first/hero-first-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-desktop.png") 1dppx, url("../img/hero/hero-first/hero-first-desktop@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-color: #668bb2;
 }
 
 .hero__second-slide {
-  background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-second/hero-second-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-desktop.png") 1dppx, url("../img/hero/hero-second/hero-second-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-second/hero-second-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-desktop.png") 1dppx, url("../img/hero/hero-second/hero-second-desktop@2x.png") 2dppx);
+  background-image: -webkit-image-set(url("../img/hero/hero-second/hero-second-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-desktop.png") 1dppx, url("../img/hero/hero-second/hero-second-desktop@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+  background-image: image-set(url("../img/hero/hero-second/hero-second-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-desktop.png") 1dppx, url("../img/hero/hero-second/hero-second-desktop@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-color: #4d7da4;
 }
 
 .hero__third-slide {
-  background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-third/hero-third-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-desktop.png") 1dppx, url("../img/hero/hero-third/hero-third-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-third/hero-third-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-desktop.png") 1dppx, url("../img/hero/hero-third/hero-third-desktop@2x.png") 2dppx);
+  background-image: -webkit-image-set(url("../img/hero/hero-third/hero-third-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-desktop.png") 1dppx, url("../img/hero/hero-third/hero-third-desktop@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+  background-image: image-set(url("../img/hero/hero-third/hero-third-desktop.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-desktop@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-desktop.png") 1dppx, url("../img/hero/hero-third/hero-third-desktop@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-color: #9eb0bc;
@@ -3215,6 +3242,14 @@ button,
   max-width: 1440px;
   position: relative;
   margin: 0 auto;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .main-container__image-wrapper {
@@ -3466,25 +3501,25 @@ button,
 }
 
 .tours__first-slide {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx);
+  background-image: image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+  background-image: image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .tours__second-slide {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx);
+  background-image: image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+  background-image: image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .tours__third-slide {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx);
+  background-image: image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+  background-image: image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx, url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3710,9 +3745,9 @@ button,
   display: block;
   min-width: 25px;
   min-height: 25px;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+  margin-top: 12px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .about-company__container {
@@ -3824,6 +3859,7 @@ button,
   -webkit-box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   max-width: 790px;
+  height: 100%;
 }
 
 .feedback__photo-user {
@@ -4034,7 +4070,7 @@ button,
 
 .gallery__buttons-container {
   position: absolute;
-  top: 66px;
+  bottom: 31.4em;
   right: 120px;
 }
 
@@ -4173,6 +4209,10 @@ button,
   background-color: #0266c1;
   color: #ffffff;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .consultation__form button:hover,
@@ -4295,8 +4335,6 @@ button,
   width: fit-content;
   -ms-grid-column: 2;
   grid-column: 2;
-  -ms-grid-row: 2;
-  grid-row: 2;
 }
 
 .contacts__info-content a:hover,
@@ -4322,8 +4360,6 @@ button,
   width: fit-content;
   -ms-grid-column: 2;
   grid-column: 2;
-  -ms-grid-row: 2;
-  grid-row: 2;
   margin: 0;
 }
 
@@ -4361,6 +4397,9 @@ button,
   padding: 31px 120px 30px 120px;
   max-width: 1440px;
   margin: 0 auto;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
 }
 
 .main-footer__logo {
@@ -4383,7 +4422,7 @@ button,
   -ms-flex-pack: start;
   justify-content: flex-start;
   gap: 10px 23px;
-  margin-left: 16px;
+  margin-left: 7px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -4684,6 +4723,9 @@ button,
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .main-header__info-container {
@@ -4713,7 +4755,12 @@ button,
     display: block;
   }
 
+  .main-header__nav-list a {
+    padding: 0;
+  }
+
   .main-header__contacts-container {
+    display: block;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
@@ -4778,7 +4825,7 @@ button,
     padding: 0 105px;
   }
 
-  .hero__content-container a {
+  .hero__button-container {
     width: 206px;
     margin: 0 auto;
   }
@@ -4820,21 +4867,21 @@ button,
   }
 
   .hero__first-slide {
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-first/hero-first-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-tablet.png") 1dppx, url("../img/hero/hero-first/hero-first-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-first/hero-first-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-tablet.png") 1dppx, url("../img/hero/hero-first/hero-first-tablet@2x.png") 2dppx);
+    background-image: -webkit-image-set(url("../img/hero/hero-first/hero-first-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-tablet.png") 1dppx, url("../img/hero/hero-first/hero-first-tablet@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+    background-image: image-set(url("../img/hero/hero-first/hero-first-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-tablet.png") 1dppx, url("../img/hero/hero-first/hero-first-tablet@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   }
 
   .hero__second-slide {
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-second/hero-second-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-tablet.png") 1dppx, url("../img/hero/hero-second/hero-second-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-second/hero-second-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-tablet.png") 1dppx, url("../img/hero/hero-second/hero-second-tablet@2x.png") 2dppx);
+    background-image: -webkit-image-set(url("../img/hero/hero-second/hero-second-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-tablet.png") 1dppx, url("../img/hero/hero-second/hero-second-tablet@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+    background-image: image-set(url("../img/hero/hero-second/hero-second-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-tablet.png") 1dppx, url("../img/hero/hero-second/hero-second-tablet@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   }
 
   .hero__third-slide {
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-third/hero-third-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-tablet.png") 1dppx, url("../img/hero/hero-third/hero-third-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-third/hero-third-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-tablet.png") 1dppx, url("../img/hero/hero-third/hero-third-tablet@2x.png") 2dppx);
+    background-image: -webkit-image-set(url("../img/hero/hero-third/hero-third-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-tablet.png") 1dppx, url("../img/hero/hero-third/hero-third-tablet@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+    background-image: image-set(url("../img/hero/hero-third/hero-third-tablet.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-tablet@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-tablet.png") 1dppx, url("../img/hero/hero-third/hero-third-tablet@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   }
 
-  .burger-menu {
+  .burger-menu__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4843,10 +4890,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     row-gap: 26px;
-    position: absolute;
-    top: 100%;
     background-color: #ffffff;
-    width: 100%;
     padding: 50px 0 70px 45px;
   }
 
@@ -4916,21 +4960,21 @@ button,
   }
 
   .tours__first-slide {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx);
+    background-image: image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+    background-image: image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   }
 
   .tours__second-slide {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx);
+    background-image: image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+    background-image: image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   }
 
   .tours__third-slide {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx);
+    background-image: image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+    background-image: image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx, url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   }
 
   .tours__buttons-container {
@@ -5053,6 +5097,10 @@ button,
   .training__process-item span {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .training__process-item-icon {
+    margin-top: 8px;
   }
 
   .about-company__container {
@@ -5232,7 +5280,7 @@ button,
 
   .gallery__buttons-container {
     right: 45px;
-    top: 63px;
+    bottom: 31.5em;
   }
 
   .consultation h2 {
@@ -5382,9 +5430,6 @@ button,
     grid-column: 2/4;
     margin-top: 5px;
     gap: 10px 11px;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
     -ms-grid-row-align: normal;
     align-self: normal;
   }
@@ -5426,6 +5471,11 @@ button,
     width: 100%;
   }
 
+  .main-header__nav-container {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
   .main-header__info-container {
     display: -ms-grid;
     display: grid;
@@ -5436,6 +5486,7 @@ button,
     grid-template-rows: -webkit-min-content -webkit-min-content;
     grid-template-rows: min-content min-content;
     padding: 15px 0 0 0;
+    gap: 0;
   }
 
   .main-header__logo-container {
@@ -5492,9 +5543,13 @@ button,
     margin-bottom: 20px;
   }
 
-  .hero__content-container a {
-    margin-bottom: 152px;
-    width: 180px;
+  .hero__button-container {
+    width: 100%;
+    margin-bottom: 172px;
+  }
+
+  .hero__button-container a {
+    margin: 0 55px;
     padding: 18px 0;
   }
 
@@ -5511,22 +5566,23 @@ button,
   }
 
   .hero__first-slide {
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-first/hero-first-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-mobile.png") 1dppx, url("../img/hero/hero-first/hero-first-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-first/hero-first-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-mobile.png") 1dppx, url("../img/hero/hero-first/hero-first-mobile@2x.png") 2dppx);
+    background-image: -webkit-image-set(url("../img/hero/hero-first/hero-first-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-mobile.png") 1dppx, url("../img/hero/hero-first/hero-first-mobile@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+    background-image: image-set(url("../img/hero/hero-first/hero-first-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-first/hero-first-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-first/hero-first-mobile.png") 1dppx, url("../img/hero/hero-first/hero-first-mobile@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   }
 
   .hero__second-slide {
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-second/hero-second-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-mobile.png") 1dppx, url("../img/hero/hero-second/hero-second-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-second/hero-second-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-mobile.png") 1dppx, url("../img/hero/hero-second/hero-second-mobile@2x.png") 2dppx);
+    background-image: -webkit-image-set(url("../img/hero/hero-second/hero-second-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-mobile.png") 1dppx, url("../img/hero/hero-second/hero-second-mobile@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+    background-image: image-set(url("../img/hero/hero-second/hero-second-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-second/hero-second-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-second/hero-second-mobile.png") 1dppx, url("../img/hero/hero-second/hero-second-mobile@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   }
 
   .hero__third-slide {
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), -webkit-image-set(url("../img/hero/hero-third/hero-third-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-mobile.png") 1dppx, url("../img/hero/hero-third/hero-third-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%), image-set(url("../img/hero/hero-third/hero-third-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-mobile.png") 1dppx, url("../img/hero/hero-third/hero-third-mobile@2x.png") 2dppx);
+    background-image: -webkit-image-set(url("../img/hero/hero-third/hero-third-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-mobile.png") 1dppx, url("../img/hero/hero-third/hero-third-mobile@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+    background-image: image-set(url("../img/hero/hero-third/hero-third-mobile.webp") type("image/webp") 1dppx, url("../img/hero/hero-third/hero-third-mobile@2x.webp") type("image/webp") 2dppx, url("../img/hero/hero-third/hero-third-mobile.png") 1dppx, url("../img/hero/hero-third/hero-third-mobile@2x.png") 2dppx), linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
   }
 
-  .burger-menu {
-    padding: 30px 0 50px 15px;
+  .burger-menu__content {
+    row-gap: 22px;
+    padding: 26px 0 50px 15px;
   }
 
   .burger-menu a {
@@ -5575,7 +5631,7 @@ button,
   }
 
   .tours__content-container {
-    padding: 196px 20px 19px 20px;
+    padding: 196px 20px 25px 20px;
   }
 
   .tours__content-container p {
@@ -5626,21 +5682,21 @@ button,
   }
 
   .tours__first-slide {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx);
+    background-image: image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+    background-image: image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   }
 
   .tours__second-slide {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx);
+    background-image: image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+    background-image: image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   }
 
   .tours__third-slide {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))), image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), -webkit-image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%), image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx);
+    background-image: image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx), -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+    background-image: image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") type("image/webp") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") type("image/webp") 2dppx, url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx, url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx), linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
   }
 
   .tours__buttons-container {
@@ -5681,7 +5737,7 @@ button,
 
   .training__instructor-photo {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
   .training__instructor-info-container a {
@@ -5786,6 +5842,7 @@ button,
   .training__process-item-icon {
     min-width: 19px;
     min-height: 19px;
+    margin-top: 4px;
     max-width: none;
   }
 
@@ -5953,8 +6010,7 @@ button,
 
   .gallery__buttons-container {
     right: 15px;
-    top: auto;
-    bottom: 17.2em;
+    bottom: 17em;
   }
 
   .consultation h2 {

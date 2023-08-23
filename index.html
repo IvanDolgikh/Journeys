@@ -49,28 +49,31 @@
                 <use href="./img/sprite.svg#close-menu"></use>
               </svg>
             </button>
-            <ul class="main-header__nav-list reset-list">
+            <div class="main-header__nav-list-container">
+              <ul class="main-header__nav-list reset-list">
 
-              <li>
-                <a href="#tours">Туры</a>
-              </li>
-              <li>
-                <a href="#training">Обучение</a>
-              </li>
-              <li>
-                <a href="#about-company">О нас</a>
-              </li>
-              <li>
-                <a href="#feedback">Отзывы</a>
-              </li>
-              <li>
-                <a href="#gallery">Фотографии</a>
-              </li>
-              <li>
-                <a href="#contacts">Контакты</a>
-              </li>
+                <li>
+                  <a href="#tours">Туры</a>
+                </li>
+                <li>
+                  <a href="#training">Обучение</a>
+                </li>
+                <li>
+                  <a href="#about-company">О нас</a>
+                </li>
+                <li>
+                  <a href="#feedback">Отзывы</a>
+                </li>
+                <li>
+                  <a href="#gallery">Фотографии</a>
+                </li>
+                <li>
+                  <a href="#contacts">Контакты</a>
+                </li>
 
-            </ul>
+              </ul>
+            </div>
+
           </nav>
         </div>
 
@@ -91,7 +94,9 @@
                   <p>Захватывающие вершины Кавказа</p>
                   <span>В&nbsp;сопровождении опытных гидов вы&nbsp;пройдете через потрясающие ландшафты и&nbsp;совершите
                     восход на&nbsp;вершину горы Чегет.</span>
-                  <a href="#">Смотреть тур</a>
+                    <div class="hero__button-container">
+                      <a href="#">Смотреть тур</a>
+                    </div>
 
                   <div class="hero__additional-info-container">
                     <div class="hero__additional-info">
@@ -126,7 +131,9 @@
                   <p>Невероятная природа Камчатки</p>
                   <span>Незабываемое приключение, во&nbsp;время которого вы&nbsp;отправитесь в&nbsp;путешествие
                     по&nbsp;одному из&nbsp;самых нетронутых уголков дикой природы в&nbsp;мире.</span>
-                  <a href="#">Смотреть тур</a>
+                    <div class="hero__button-container">
+                      <a href="#">Смотреть тур</a>
+                    </div>
 
                   <div class="hero__additional-info-container">
                     <div class="hero__additional-info">
@@ -168,7 +175,9 @@
                   <p>Магические пейзажи Алтайского Края</p>
                   <span>Алтайский трекинг-тур&nbsp;&mdash; это захватывающее приключение с&nbsp;посещением магических
                     и&nbsp;захватывающих дух ландшафтов Алтайских гор.</span>
-                  <a href="#">Смотреть тур</a>
+                    <div class="hero__button-container">
+                      <a href="#">Смотреть тур</a>
+                    </div>
 
                   <div class="hero__additional-info-container">
                     <div class="hero__additional-info">
@@ -584,8 +593,14 @@
                 <div class="swiper-slide">
                   <div class="training__instructor-container">
                     <picture>
+                      <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/instructors/first-instructor-mobile.webp 1x, img/instructors/first-instructor-mobile@2x.webp 2x"
+                        width="238" height="212">
                       <source type="image/webp"
                         srcset="img/instructors/first-instructor.webp 1x, img/instructors/first-instructor.webp 2x"
+                        width="238" height="212">
+                        <source media="(max-width: 767px)"
+                        srcset="img/instructors/first-instructor-mobile.png 1x, img/instructors/first-instructor-mobile@2x.png 2x"
                         width="238" height="212">
                       <img class="training__instructor-photo" src="img/instructors/first-instructor.png"
                         srcset="img/instructors/first-instructor@2x.png 2x" width="238" height="212"
@@ -608,8 +623,14 @@
                 <div class="swiper-slide">
                   <div class="training__instructor-container">
                     <picture>
+                      <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/instructors/second-instructor-mobile.webp 1x, img/instructors/second-instructor-mobile@2x.webp 2x"
+                        width="238" height="212">
                       <source type="image/webp"
                         srcset="img/instructors/second-instructor.webp 1x, img/instructors/second-instructor.webp 2x"
+                        width="238" height="212">
+                        <source media="(max-width: 767px)"
+                        srcset="img/instructors/second-instructor-mobile.png 1x, img/instructors/second-instructor-mobile@2x.png 2x"
                         width="238" height="212">
                       <img class="training__instructor-photo" src="img/instructors/second-instructor.png"
                         srcset="img/instructors/second-instructor@2x.png 2x" width="238" height="212"
@@ -633,8 +654,14 @@
                 <div class="swiper-slide">
                   <div class="training__instructor-container">
                     <picture>
+                      <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/instructors/third-instructor-mobile.webp 1x, img/instructors/third-instructor-mobile@2x.webp 2x"
+                        width="238" height="212">
                       <source type="image/webp"
                         srcset="img/instructors/third-instructor.webp 1x, img/instructors/third-instructor.webp 2x"
+                        width="238" height="212">
+                        <source media="(max-width: 767px)"
+                        srcset="img/instructors/third-instructor-mobile.png 1x, img/instructors/third-instructor-mobile@2x.png 2x"
                         width="238" height="212">
                       <img class="training__instructor-photo" src="img/instructors/third-instructor.png"
                         srcset="img/instructors/third-instructor@2x.png 2x" width="238" height="212"
@@ -656,8 +683,14 @@
                 <div class="swiper-slide">
                   <div class="training__instructor-container">
                     <picture>
+                      <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/instructors/fourth-instructor-mobile.webp 1x, img/instructors/fourth-instructor-mobile@2x.webp 2x"
+                        width="238" height="212">
                       <source type="image/webp"
                         srcset="img/instructors/fourth-instructor.webp 1x, img/instructors/fourth-instructor.webp 2x"
+                        width="238" height="212">
+                        <source media="(max-width: 767px)"
+                        srcset="img/instructors/fourth-instructor-mobile.png 1x, img/instructors/fourth-instructor-mobile@2x.png 2x"
                         width="238" height="212">
                       <img class="training__instructor-photo" src="img/instructors/fourth-instructor.png"
                         srcset="img/instructors/fourth-instructor@2x.png 2x" width="238" height="212"
@@ -681,8 +714,14 @@
                 <div class="swiper-slide">
                   <div class="training__instructor-container">
                     <picture>
+                      <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/instructors/first-instructor-mobile.webp 1x, img/instructors/first-instructor-mobile@2x.webp 2x"
+                        width="238" height="212">
                       <source type="image/webp"
                         srcset="img/instructors/first-instructor.webp 1x, img/instructors/first-instructor.webp 2x"
+                        width="238" height="212">
+                        <source media="(max-width: 767px)"
+                        srcset="img/instructors/first-instructor-mobile.png 1x, img/instructors/first-instructor-mobile@2x.png 2x"
                         width="238" height="212">
                       <img class="training__instructor-photo" src="img/instructors/first-instructor.png"
                         srcset="img/instructors/first-instructor@2x.png 2x" width="238" height="212"
@@ -1058,6 +1097,7 @@
         <h2 data-gallery-secondary-title="Фотогалерея">Фотогалерея</h2>
         <p>Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур, а&nbsp;также отмечайте нас на&nbsp;фото. Лучшие
           фотографии украсят этот раздел нашего сайта.</p>
+
         <div class="swiper-buttons gallery__buttons-container">
           <button class="swiper-buttons__back" aria-label="Предыдущий слайд.">
             <svg class="swiper-buttons__icon" width="13" height="13">
@@ -1243,19 +1283,6 @@
               </div>
             </div>
 
-          </div>
-
-          <div class="swiper-buttons gallery__buttons-container">
-            <button class="swiper-buttons__back" aria-label="Предыдущий слайд.">
-              <svg class="swiper-buttons__icon" width="13" height="13">
-                <use href="./img/sprite.svg#arrow-back-icon"></use>
-              </svg>
-            </button>
-            <button class="swiper-buttons__next" aria-label="Следующий слайд.">
-              <svg class="swiper-buttons__icon" width="13" height="13">
-                <use href="./img/sprite.svg#arrow-back-icon"></use>
-              </svg>
-            </button>
           </div>
 
         </div>
