@@ -139,6 +139,7 @@
   background-color: $color-secondary;
   color: $color-default-white;
   cursor: pointer;
+  user-select: none;
 
   &:hover,
   &:focus-visible {

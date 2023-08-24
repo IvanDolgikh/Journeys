@@ -97,17 +97,16 @@
 
 .gallery__buttons-container {
   position: absolute;
-  top: 66px;
+  bottom: 31.4em;
   right: 120px;
 
   @include vp-1199 {
     right: 45px;
-    top: 63px;
+    bottom: 31.5em;
   }
 
   @include vp-767 {
     right: 15px;
-    top: auto;
-    bottom: 17.2em;
+    bottom: 17em;
   }
 }

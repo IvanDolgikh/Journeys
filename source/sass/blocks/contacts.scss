@@ -166,7 +166,6 @@
   line-height: 24px;
   width: fit-content;
   grid-column: 2;
-  grid-row: 2;
 
   &:hover,
   &:focus-visible {
@@ -198,7 +197,6 @@
   line-height: 24px;
   width: fit-content;
   grid-column: 2;
-  grid-row: 2;
   margin: 0;
 
   @include vp-1199 {

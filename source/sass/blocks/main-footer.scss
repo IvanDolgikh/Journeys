@@ -10,6 +10,7 @@
   padding: 31px 120px 30px 120px;
   max-width: $max-width;
   margin: 0 auto;
+  column-gap: 10px;
 
   @include vp-1199 {
     padding: 44px 45px 40px 45px;
@@ -39,14 +40,14 @@
   display: flex;
   justify-content: flex-start;
   gap: 10px 23px;
-  margin-left: 16px;
+  margin-left: 7px;
   flex-wrap: wrap;
 
   @include vp-1199 {
     grid-column: 2 / 4;
+    margin-left: 68px;
     margin-top: 5px;
     gap: 10px 11px;
-    justify-content: flex-end;
     align-self: normal;
   }
 
@@ -100,6 +101,9 @@
   grid-column: 3;
   grid-row: 1;
   justify-self: end;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 
   @include vp-1199 {
     display: none;

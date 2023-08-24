@@ -128,7 +128,7 @@
   padding: 206px 24px 22px 20px;
 
   @include vp-767 {
-    padding: 196px 20px 19px 20px;
+    padding: 196px 20px 25px 20px;
   }
 }
 
@@ -325,8 +325,8 @@
 .tours__first-slide {
   background-image:
     linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-    image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") type("image/webp") 1dppx,
-      url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") type("image/webp") 2dppx,
+    image-set(url("../img/tours/tour-desktop/first-tour-desktop.webp") 1dppx,
+      url("../img/tours/tour-desktop/first-tour-desktop@2x.webp") 2dppx,
       url("../img/tours/tour-desktop/first-tour-desktop.png") 1dppx,
       url("../img/tours/tour-desktop/first-tour-desktop@2x.png") 2dppx,
     );
@@ -336,8 +336,8 @@
   @include vp-1199 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") type("image/webp") 1dppx,
-        url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") type("image/webp") 2dppx,
+      image-set(url("../img/tours/tour-tablet/first-tour-tablet.webp") 1dppx,
+        url("../img/tours/tour-tablet/first-tour-tablet@2x.webp") 2dppx,
         url("../img/tours/tour-tablet/first-tour-tablet.png") 1dppx,
         url("../img/tours/tour-tablet/first-tour-tablet@2x.png") 2dppx,
       );
@@ -346,8 +346,8 @@
   @include vp-767 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") type("image/webp") 1dppx,
-        url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") type("image/webp") 2dppx,
+      image-set(url("../img/tours/tour-mobile/first-tour-mobile.webp") 1dppx,
+        url("../img/tours/tour-mobile/first-tour-mobile@2x.webp") 2dppx,
         url("../img/tours/tour-mobile/first-tour-mobile.png") 1dppx,
         url("../img/tours/tour-mobile/first-tour-mobile@2x.png") 2dppx,
       );
@@ -357,8 +357,8 @@
 .tours__second-slide {
   background-image:
     linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-    image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") type("image/webp") 1dppx,
-      url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") type("image/webp") 2dppx,
+    image-set(url("../img/tours/tour-desktop/second-tour-desktop.webp") 1dppx,
+      url("../img/tours/tour-desktop/second-tour-desktop@2x.webp") 2dppx,
       url("../img/tours/tour-desktop/second-tour-desktop.png") 1dppx,
       url("../img/tours/tour-desktop/second-tour-desktop@2x.png") 2dppx,
     );
@@ -368,8 +368,8 @@
   @include vp-1199 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") type("image/webp") 1dppx,
-        url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") type("image/webp") 2dppx,
+      image-set(url("../img/tours/tour-tablet/second-tour-tablet.webp") 1dppx,
+        url("../img/tours/tour-tablet/second-tour-tablet@2x.webp") 2dppx,
         url("../img/tours/tour-tablet/second-tour-tablet.png") 1dppx,
         url("../img/tours/tour-tablet/second-tour-tablet@2x.png") 2dppx,
     );
@@ -378,8 +378,8 @@
   @include vp-767 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") type("image/webp") 1dppx,
-        url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") type("image/webp") 2dppx,
+      image-set(url("../img/tours/tour-mobile/second-tour-mobile.webp") 1dppx,
+        url("../img/tours/tour-mobile/second-tour-mobile@2x.webp") 2dppx,
         url("../img/tours/tour-mobile/second-tour-mobile.png") 1dppx,
         url("../img/tours/tour-mobile/second-tour-mobile@2x.png") 2dppx,
       );
@@ -389,8 +389,8 @@
 .tours__third-slide {
   background-image:
     linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-    image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") type("image/webp") 1dppx,
-      url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") type("image/webp") 2dppx,
+    image-set(url("../img/tours/tour-desktop/third-tour-desktop.webp") 1dppx,
+      url("../img/tours/tour-desktop/third-tour-desktop@2x.webp") 2dppx,
       url("../img/tours/tour-desktop/third-tour-desktop.png") 1dppx,
       url("../img/tours/tour-desktop/third-tour-desktop@2x.png") 2dppx,
     );
@@ -400,8 +400,8 @@
   @include vp-1199 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") type("image/webp") 1dppx,
-        url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") type("image/webp") 2dppx,
+      image-set(url("../img/tours/tour-tablet/third-tour-tablet.webp") 1dppx,
+        url("../img/tours/tour-tablet/third-tour-tablet@2x.webp") 2dppx,
         url("../img/tours/tour-tablet/third-tour-tablet.png") 1dppx,
         url("../img/tours/tour-tablet/third-tour-tablet@2x.png") 2dppx,
       );
@@ -410,8 +410,8 @@
   @include vp-767 {
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%),
-      image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") type("image/webp") 1dppx,
-      url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") type("image/webp") 2dppx,
+      image-set(url("../img/tours/tour-mobile/third-tour-mobile.webp") 1dppx,
+      url("../img/tours/tour-mobile/third-tour-mobile@2x.webp") 2dppx,
       url("../img/tours/tour-mobile/third-tour-mobile.png") 1dppx,
       url("../img/tours/tour-mobile/third-tour-mobile@2x.png") 2dppx,
     );

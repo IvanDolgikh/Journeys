@@ -1,6 +1,6 @@
 export const swiper = new Swiper('.swiper-1', {
   direction: 'horizontal',
-  loop: false,
+  loop: true,
   slidesPerView: 1,
 
   pagination: {
@@ -90,13 +90,13 @@ export const swiperGallery = new Swiper('.swiper-6', {
   spaceBetween: 5,
 
   navigation: {
-    nextEl: '.gallery__buttons-container .swiper-buttons__next',
-    prevEl: '.gallery__buttons-container .swiper-buttons__back',
+    nextEl: '.gallery .swiper-buttons__next',
+    prevEl: '.gallery .swiper-buttons__back',
   },
 });
 
 let swiperAdvantages;
-const breakpoint = window.matchMedia('(max-width:1200px)');
+const breakpoint = window.matchMedia('(max-width:1199px)');
 
 const enableSwiperAdvantages = function () {
   swiperAdvantages = new Swiper('.swiper-5', {
